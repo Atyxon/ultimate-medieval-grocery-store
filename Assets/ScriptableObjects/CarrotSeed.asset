@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432b7012bc8ce8746901de97b2a37b50, type: 3}
+  m_Name: CarrotSeed
+  m_EditorClassIdentifier: 
+  itemName: Carrot Seeds
+  tiemId: 0
+  itemPrefab: {fileID: 275021366207118170, guid: fc8d9d0725edbb54c87707fe565dc02f, type: 3}
+  itemDesc: Humble bag containing carrot seeds
+  itemSprite: {fileID: 21300000, guid: 0e5429b011d250249a3acb75543051ac, type: 3}
+  priceInShop: 2
+  plantGhost: {fileID: 4448082231627842467, guid: cdca448ac3e57f14f9e9995e9e58ad24, type: 3}
+  seedAnim: {fileID: 9100000, guid: c854873c80a84b141bac9c4291b2dce4, type: 2}
+  quantity: 0
+  maxQuantity: 20
+  objectToInstantiate: {fileID: 6397021619696361706, guid: 3adc663b4e025e94eb2ee503608e3bad, type: 3}

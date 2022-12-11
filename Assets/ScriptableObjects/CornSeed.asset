@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432b7012bc8ce8746901de97b2a37b50, type: 3}
+  m_Name: CornSeed
+  m_EditorClassIdentifier: 
+  itemName: Corn Seeds
+  tiemId: 2
+  itemPrefab: {fileID: 275021366207118170, guid: 559c5a973a1456a4d91bb5325ae44bbd, type: 3}
+  itemDesc: Humble bag containing corn seeds
+  itemSprite: {fileID: 21300000, guid: c3aee086d593a7340a0fbf0aa7054080, type: 3}
+  priceInShop: 3
+  plantGhost: {fileID: 4448082231627842467, guid: b9359ebccf412cc48bd7969dbc523c94, type: 3}
+  seedAnim: {fileID: 9100000, guid: c854873c80a84b141bac9c4291b2dce4, type: 2}
+  quantity: 0
+  maxQuantity: 20
+  objectToInstantiate: {fileID: 6397021619696361706, guid: 4e2a6eaf0cec02a4a9698f205aa9c2fe, type: 3}

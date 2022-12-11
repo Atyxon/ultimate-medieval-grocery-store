@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbd770ce4cea7e34c84e8dab0d5a6995, type: 3}
+  m_Name: WoodenBucket
+  m_EditorClassIdentifier: 
+  itemName: Wooden Bucket
+  tiemId: 6
+  itemPrefab: {fileID: 5921607358253273988, guid: 730cbb0ac532e034680cdf3aaf15a2f5, type: 3}
+  itemDesc: Bucket to garher water and to water flowers
+  itemSprite: {fileID: 21300000, guid: 634f0421fbc29ad48b69917af9863640, type: 3}
+  priceInShop: 15
+  toolAnim: {fileID: 9100000, guid: 55e947c11d760f44b9ddd98bfdb8a0ad, type: 2}
+  fillLevel: 0
+  maxFillLevel: 5
+  postfix: L
+  useBarToShowFillLevel: 0
+  useFuel: 0
+  loadedFuel: {fileID: 0}
+  useAttachments: 0
