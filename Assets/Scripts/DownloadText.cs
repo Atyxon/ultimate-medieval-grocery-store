@@ -4,10 +4,12 @@ using TMPro;
 
 public class DownloadText : MonoBehaviour
 {
+    public bool devChangelog;
+    [Space]
     public TextMeshProUGUI logText;
     public string text;
-    private string url = "https://pastebin.com/raw/xH6JT9tE"; // <-- enter your url here
-
+    private string urlDev = "https://raw.githubusercontent.com/Atyxon/UMGS-changelog/main/changelog-dev";
+    private string urlProd = "https://raw.githubusercontent.com/Atyxon/UMGS-changelog/main/changelog-prod";
     void Start()
     {
         StartCoroutine(GetTextFromWWW());
@@ -15,6 +17,12 @@ public class DownloadText : MonoBehaviour
 
     IEnumerator GetTextFromWWW()
     {
+        string url = "";
+        if (devChangelog)
+            url = urlDev;
+        else
+            url = urlProd;
+
         WWW www = new WWW(url);
 
         yield return www;
