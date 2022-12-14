@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class pauseMenuManager : MonoBehaviour
 {
+    public Canvas ui;
     public GameObject savePopup;
     public SaveLoadManager saveManager;
     public GameObject pauseMenu;
@@ -22,11 +23,13 @@ public class pauseMenuManager : MonoBehaviour
     public Transform targetPos;
     public Transform hiddenPos;
     public float transformSpeed;
+    float originUiScale;
     [Space]
     public bool canClick;
     public bool isMenuOppened;
     private void Start()
     {
+        originUiScale = GetComponent<RectTransform>().localScale.y;
         settingsWindow.SetActive(true);
         loadingScreen.SetActive(false);
     }
@@ -70,9 +73,17 @@ public class pauseMenuManager : MonoBehaviour
             canClick = false;
         }
     }
-    public void Save()
+    IEnumerator waiter()
     {
-        saveManager.Save();
+        ui.enabled = false;
+        yield return new WaitForSecondsRealtime(.001f);
+        ScreenCapture.CaptureScreenshot(Application.persistentDataPath + "/" + saveManager.loadMng.saveName  + ".png");
+        yield return new WaitForSecondsRealtime(.001f);
+        ui.enabled = true;
+    }
+     public void Save()
+    {
+        StartCoroutine(waiter());
         savePopup.SetActive(false);
         savePopup.SetActive(true);
     }
