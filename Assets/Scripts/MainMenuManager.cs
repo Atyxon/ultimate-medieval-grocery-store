@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.IO;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -190,6 +191,8 @@ public class MainMenuManager : MonoBehaviour
                 MainMenuSaveSlot slot = SaveSlot.GetComponent<MainMenuSaveSlot>();
                 slot.saveName = arrayOfStrings[i];
                 nothingToShowHereText.SetActive(false);
+                string path = Application.persistentDataPath + "/" + slot.saveName + ".png";
+                slot.ScreenshotImage.texture = LoadPNG(path);
             }
         }
     }
@@ -212,5 +215,19 @@ public class MainMenuManager : MonoBehaviour
     {
         deleteSave.SetActive(false);
         saveToDelete.DeleteSaveConfirmed();
+    }
+    public static Texture2D LoadPNG(string filePath)
+    {
+
+        Texture2D tex = null;
+        byte[] fileData;
+
+        if (File.Exists(filePath))
+        {
+            fileData = File.ReadAllBytes(filePath);
+            tex = new Texture2D(2, 2);
+            tex.LoadImage(fileData);
+        }
+        return tex;
     }
 }

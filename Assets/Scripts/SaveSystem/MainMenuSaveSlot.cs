@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class MainMenuSaveSlot : MonoBehaviour
 {
+    public RawImage ScreenshotImage;
     public MainMenuManager mainMenuMng;
     public string saveName;
     public TextMeshProUGUI saveNameText;
