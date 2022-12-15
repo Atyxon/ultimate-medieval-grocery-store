@@ -230,4 +230,16 @@ public class MainMenuManager : MonoBehaviour
         }
         return tex;
     }
+
+    public void OpenDiscordLink()
+    {
+        string url = "https://discord.gg/V2B4Gxc6E6";
+        Application.OpenURL(url);
+    }
+
+    public void OpenItchLink()
+    {
+        string url = "https://atudev.itch.io/";
+        Application.OpenURL(url);
+    }
 }
