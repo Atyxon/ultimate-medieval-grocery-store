@@ -76,14 +76,15 @@ public class pauseMenuManager : MonoBehaviour
     IEnumerator waiter()
     {
         ui.enabled = false;
-        yield return new WaitForSecondsRealtime(.001f);
+        yield return new WaitForSecondsRealtime(.0001f);
         ScreenCapture.CaptureScreenshot(Application.persistentDataPath + "/" + saveManager.loadMng.saveName  + ".png");
-        yield return new WaitForSecondsRealtime(.001f);
+        yield return new WaitForSecondsRealtime(.0001f);
         ui.enabled = true;
     }
      public void Save()
     {
         StartCoroutine(waiter());
+        saveManager.Save();
         savePopup.SetActive(false);
         savePopup.SetActive(true);
     }

@@ -25079,7 +25079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f480136284a743b4a8c36a6a4ea99f93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  devChangelog: 1
+  devChangelog: 0
   logText: {fileID: 848668008}
   text: 
 --- !u!114 &1526640478
