@@ -23,8 +23,10 @@ public class MainMenuManager : MonoBehaviour
     public TMP_InputField saveNameInputField;
     public GameObject nothingToShowHereText;
     public GameObject deleteSave;
+    public GameObject mainMenuPanel;
     public MainMenuSaveSlot saveToDelete;
     public TextMeshProUGUI deleteText;
+    public Animator cameraAnim;
     [Space]
     public bool loadSaveWindowOpen;
     public bool newGameWindowOpen;
@@ -91,8 +93,14 @@ public class MainMenuManager : MonoBehaviour
             Background.raycastTarget = false;
         }
     }
+    public void SetTriggerCloseNewGameWindow()
+    {
+        cameraAnim.SetTrigger("CloseNewGame");
+    }
+
     public void CloseWindow()
     {
+        mainMenuPanel.SetActive(true);
         loadSaveWindowOpen = false;
         newGameWindowOpen = false;
         settingsWindowOpen = false;
@@ -113,8 +121,10 @@ public class MainMenuManager : MonoBehaviour
     {
         if (canClick)
         {
+            cameraAnim.SetTrigger("OpenNewGame");
+            mainMenuPanel.SetActive(false);
             newGameWindowOpen = true;
-            backgroundEnabled = true;
+            backgroundEnabled = false;
             canClick = false;
         }
     }
