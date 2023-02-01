@@ -1,6 +1,7 @@
 # ultimate-medieval-grocery-store
 
 Ultimate Medieval Grocery Store is a game where you own a grocery store and sell goods you have made yourself
+All scripts are under **/Assets/Scripts**
 
 ## Used Technology
 
