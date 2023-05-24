@@ -3,6 +3,8 @@
 Ultimate Medieval Grocery Store is a game where you own a grocery store and sell goods you have made yourself
 
 All scripts are under **/Assets/Scripts**
+# Download build
+https://atudev.itch.io/ultimate-medieval-grocery-store
 
 ## Used Technology
 
